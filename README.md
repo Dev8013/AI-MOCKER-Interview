@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+**AI_MOCKER_INTERVIEW**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Project Description**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+AI_MOCKER_INTERVIEW is a web application designed to simulate job interviews using artificial intelligence. It provides a platform for users to practice answering interview questions based on their chosen role, job description, years of experience, and skills. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Features**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* **Personalized Interview:** Tailors questions based on user input.
+* **Speech-to-Text Recording:** Captures interview responses through voice input.
+* **Drizzle ORM Integration:** Stores interview data in a Neon database using Drizzle ORM.
+* **AI Feedback and Rating:** Analyzes recorded responses and provides feedback with a rating.
+* **Correct Approach Guidance:** Offers insights into the best way to approach each question.
+* **Next.js 14 Framework:** Built using Next.js 14 for a modern and performant web application.
+* **Clerk Authentication:** Secures user accounts with Clerk for robust authentication.
+* **Tailwind CSS Styling:** Employs Tailwind CSS for a clean and responsive user interface.
 
-## Learn More
+**Getting Started**
 
-To learn more about Next.js, take a look at the following resources:
+1. **Prerequisites**
+   * Node.js and npm (or yarn) installed on your system.
+   * A Neon database instance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Clone the Repository**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/your-username/AI-MOCKER-Interview.git
+   ```
 
-## Deploy on Vercel
+3. **Install Dependencies**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd AI_MOCKER_INTERVIEW
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Environment Variables**
+
+   Create a `.env.local` file in the project root and add the following environment variables, replacing placeholders with your actual values:
+
+   ```
+   NEXT_PUBLIC_CLERK_FRONTEND_API=YOUR_CLERK_FRONTEND_API_KEY
+   NEXT_PUBLIC_NEON_DATABASE_URL=YOUR_NEON_DATABASE_URL
+   ```
+
+   * You can obtain your Clerk Frontend API key from the Clerk dashboard.
+   * Set the Neon database URL according to your Neon setup.
+
+5. **Start the Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+   This will start the Next.js development server at http://localhost:3000 by default.
+
+**Deployment**
+
+This README assumes a deployment using Vercel or a similar platform. The specific deployment steps will vary depending on your chosen platform. However, here are some general guidelines:
+
+1. **Configure Deployment Environment Variables**
+   Set the same environment variables you used locally in your deployment environment (e.g., Vercel secrets).
+
+2. **Build for Production**
+
+   ```bash
+   npm run build
+   ```
+
+3. **Deploy to Platform**
+
+   Follow the deployment instructions for your chosen platform.
+
+**Usage**
+
+1. **Create an Account** (if using Clerk)
+   Sign up for an account to use the AI_MOCKER_INTERVIEW application.
+
+2. **Select Interview Parameters**
+   Choose your desired role, job description, years of experience, and skills. This will personalize the interview questions.
+
+3. **Answer Interview Questions**
+   The AI will ask you a series of questions based on your selections. Use your microphone to record your answers.
+
+4. **Receive Feedback and Rating**
+   After completing the interview, the AI will analyze your recorded responses and provide feedback along with a rating. You'll also receive insights into the best way to approach each question.
+
+**Tech Stack**
+
+* Frontend: Next.js 14
+* Authentication: Clerk
+* Database: Neon (with Drizzle ORM)
+* Styling: Tailwind CSS
+
+**Contributing**
+
+We welcome contributions to this project! Please refer to the CONTRIBUTING.md file (if you choose to create one) for guidelines on how to contribute.
+
+**License**
+
+This project is licensed under the MIT License (see LICENSE.md for details).
+
+**Disclaimer**
+
+This AI interview simulation is intended for practice and learning purposes only. It should not be solely relied upon for actual job interview preparation.
